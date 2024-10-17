@@ -1,51 +1,32 @@
 
-// Ajax JS
-
 $(function() {
+    // Get the form.
+    var form = $('#contact-form');
 
-	// Get the form.
-	var form = $('#contact-form');
+    // Set up an event listener for the contact form.
+    $(form).submit(function(e) {
+        // Stop the browser from submitting the form.
+        e.preventDefault();
 
-	// Get the messages div.
-	var formMessages = $('.form-message');
+        // Get form data
+        const name = $('#name').val();
+        const email = $('#form_email').val();
+        const subject = $('#subject').val();
+        const message = $('#message').val();
 
-	// Set up an event listener for the contact form.
-	$(form).submit(function(e) {
-		// Stop the browser from submitting the form.
-		e.preventDefault();
+        // Construct the WhatsApp message
+        const whatsappMessage = `*Name:* ${name}%0A*Email:* ${email}%0A*Subject:* ${subject}%0A*Message:* ${message}`;
 
-		// Serialize the form data.
-		var formData = $(form).serialize();
+        // Replace this with your WhatsApp number in international format (e.g., 15555555555 for USA)
+        const whatsappNumber = '212684829849';
 
-		// Submit the form using AJAX.
-		$.ajax({
-			type: 'POST',
-			url: $(form).attr('action'),
-			data: formData
-		})
-		.done(function(response) {
-			// Make sure that the formMessages div has the 'success' class.
-			$(formMessages).removeClass('error');
-			$(formMessages).addClass('success');
+        // WhatsApp API URL
+        const whatsappURL = `https://api.whatsapp.com/send?phone=${whatsappNumber}&text=${whatsappMessage}`;
 
-			// Set the message text.
-			$(formMessages).text(response);
+        // Open WhatsApp in a new tab with the pre-filled message
+        window.open(whatsappURL, '_blank');
 
-			// Clear the form.
-			$('#contact-form input,#contact-form textarea').val('');
-		})
-		.fail(function(data) {
-			// Make sure that the formMessages div has the 'error' class.
-			$(formMessages).removeClass('success');
-			$(formMessages).addClass('error');
-
-			// Set the message text.
-			if (data.responseText !== '') {
-				$(formMessages).text(data.responseText);
-			} else {
-				$(formMessages).text('Oops! An error occured and your message could not be sent.');
-			}
-		});
-	});
-
+        // Optionally, clear the form
+        $('#contact-form input, #contact-form textarea').val('');
+    });
 });
