@@ -8,13 +8,13 @@ $(function() {
         e.preventDefault();
 
         // Get form data
-        const name = $('#Nom').val();
-        const email = $('#Prenom').val();
-        const subject = $('#Date').val();
+        const nom = $('#Nom').val();
+        const prenom = $('#Prenom').val();
+        const date = $('#Date').val();
         const message = $('#Message').val();
 
         // Construct the WhatsApp message
-        const whatsappMessage = `*Name:* ${name}%0A*Email:* ${email}%0A*Subject:* ${subject}%0A*Message:* ${message}`;
+        const whatsappMessage = `*Name:* ${nom}%0A*Email:* ${prenom}%0A*Subject:* ${date}%0A*Message:* ${message}`;
 
         // WhatsApp number (replace with your actual number in international format)
         const whatsappNumber = '212684829849';

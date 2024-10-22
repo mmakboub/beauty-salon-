@@ -156,30 +156,34 @@
 							<div class="atf-salon-form">
 								<form action="#" class="atf-salon-form-box row" onsubmit="sendWhatsAppMessage(event)">
 									<div class="atf-salon-form-item col-lg-4 col-md-6">
-										<label>Nom et prénom</label>
+										<label>Nom</label>
 										<div class="form-group">
-											<input type="text" name="name" class="form-control" id="name1" placeholder="Nom et prénom" required="required">
+											<input type="text" name="name" class="form-control" id="nom" placeholder="Nom" required="required">
+											<span class="error-message" id="nameError" style="color: rgb(255, 251, 251);"></span>
 										</div>
-									</div> 
+									</div>
 									<div class="atf-salon-form-item col-lg-4 col-md-6">
-										<label>Email</label>
+										<label>Prénom</label>
 										<div class="form-group">
-											<input type="email" name="email" class="form-control" id="mail" placeholder="Email" required="required">
+											<input type="text" name="prenom" class="form-control" id="prenom" placeholder="Prénom" required="required">
+											<span class="error-message" id="prenomError" style="color:rgb(255, 251, 251);"></span>
 										</div>
-									</div> 
-									<div class="atf-salon-form-item col-lg-4 col-md-6">
-										<label>Numéro de téléphone</label>
-										<div class="form-group">
-											<input type="text" name="phone" class="form-control" id="phone" placeholder="Numéro de téléphone" required="required">
-										</div>
-									</div> 
+									</div>
 									<div class="atf-salon-form-item col-lg-4 col-md-6">
 										<label>Date</label>
 										<div class="atf-check-in">
-											<input class="form-control" type="text" id="date" placeholder="Date" autocomplete="off">
+											<input class="form-control" type="text" id="date" placeholder="DD-MM-YY" autocomplete="off">
+											<span class="error-message" id="dateError" style="color: rgb(255, 251, 251);"></span>
 											<div class="input-group-addon"><i class="far fa-calendar-alt"></i></div>
 										</div>
-									</div> 
+									</div>
+									<div class="atf-salon-form-item col-lg-4 col-md-6">
+										<label>Message</label>
+										<div class="form-group">
+											<input type="text" name="message" class="form-control" id="message" placeholder="Message" required="required">
+											<span class="error-message" id="messageError" style="color: rgb(255, 251, 251);"></span>
+										</div>
+									</div>
 									<div class="atf-salon-form-item col-lg-4 col-md-6">
 										<label>Choisir une catégorie</label>
 										<select class="nice-select" id="category">
@@ -188,13 +192,14 @@
 											<option>onglerie</option>
 											<option>esthetique</option>
 										</select>
-									</div> 
+									</div>
 									<div class="atf-salon-form-item col-lg-4 col-md-6 mx-auto my-auto">
 										<div class="atf-btn-wrapper text-center">
 											<button type="submit" class="btn atf-themes-btn text-uppercase">Réservez maintenant</button>
 										</div>
 									</div>
 								</form>
+								
 							</div>
 						</div>
 					</div>
