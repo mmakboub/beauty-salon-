@@ -1,4 +1,3 @@
-
 $(function() {
     // Get the form.
     var form = $('#contact-form');
@@ -9,15 +8,15 @@ $(function() {
         e.preventDefault();
 
         // Get form data
-        const name = $('#name').val();
-        const email = $('#form_email').val();
-        const subject = $('#subject').val();
-        const message = $('#message').val();
+        const name = $('#Nom').val();
+        const email = $('#Prenom').val();
+        const subject = $('#Date').val();
+        const message = $('#Message').val();
 
         // Construct the WhatsApp message
         const whatsappMessage = `*Name:* ${name}%0A*Email:* ${email}%0A*Subject:* ${subject}%0A*Message:* ${message}`;
 
-        // Replace this with your WhatsApp number in international format (e.g., 15555555555 for USA)
+        // WhatsApp number (replace with your actual number in international format)
         const whatsappNumber = '212684829849';
 
         // WhatsApp API URL

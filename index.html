@@ -14,7 +14,7 @@
 		<!-- SITE TITLE -->
 		<title>Oglambeautymarrakech - Beauty Salon & Spa </title>
 		<!-- Favicon -->
-		<link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+		<link rel="shortcut icon" href="assets/img/logo.png" type="image/x-icon">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
 <!-- Font Awesome 6 (if applicable) -->
@@ -98,8 +98,8 @@
 					<div class="row">
 						<div class="col-lg-2 col-md-3 col-sm-4">
 							<div class="site-logo">
-								<a href="index.html"><img class="logo-black" src="assets/img/logo.png" alt=""></a>          				
-								<a href="index.html"><img class="logo-white" src="assets/img/logo-white.png" alt=""></a>          				
+								<a href="index.html"><img class="logo-black" style="width: 60%; height: 60%;"  src="assets/img/logo.png" alt=""></a>          				
+								<a href="index.html"><img class="logo-white"  style="width: 70%; height: 70%;" src="assets/img/logo-white.png" alt=""></a>          				
 							</div>
 						</div><!--- END Col -->
 						
@@ -111,13 +111,13 @@
 										
 									  </li>				  
 									  <li><a href="#about">A propos</a></li>
+									  <li><a href="#pricing">Tarifs</a></li>
 									  <li><a href="#service">Service</a></li>
 									  <li><a href="#portfolio">portfolio</a></li>
 									  
 									  <li><a href="#team">Specialist</a></li>
-									  <li><a href="#pricing">Tarifs</a></li>
-									  <li><a href="#blog">Blog</a></li>
-									  <li><a href="#contact">nouveautés</a></li>
+									  <li><a href="#blog">nouveautés</a></li>
+									  <li><a href="#contact">Contactez-nous</a></li>
 									</ul>
 								</nav>
 								<div id="mobile_menu"></div>
@@ -134,13 +134,13 @@
 					<div class="row justify-content-left">
 						 <!--LEFT COL-->
 						<div class="col-xl-7 col-lg-6 col-12 atf-single-details text-left">
-							<h5 class="text-white text-uppercase mb-4"><img src="assets/img/favicon.png" alt="favicon" /> Élevez Votre Expérience Beauté </h5>
+							<h5 class="text-white text-uppercase mb-4">Élevez Votre Expérience Beauté </h5>
 							<h2 class="text-uppercase">Là Où L'Élégance Rencontre L'Expertise en Beauté et Bien-être </h2>
 							<p class="f-17 mt-4 text-white">Découvrez Votre Parcours Beauté & Planifiez Votre Transformation </p>
 							<!-- Main-btn -->
 							<div class="atf-main-btn atf-home-btn mt-5"> 
 								<a href="#pricing" class="atf-themes-btn">Explorer maintenant<i class="fa fa-angle-right"></i></a>
-								<a href="#contact" class="atf-themes-btn btn-2 ms-2">réserver maintenant <i class="fa fa-angle-right"></i></a>
+								<a href="#contact" class="atf-themes-btn btn-2 ms-2">réserver maintenant<i class="fa fa-angle-right"></i></a>
 							</div>
 						</div><!--- END COL -->
 					</div><!--- END ROW -->
@@ -154,48 +154,44 @@
 					<div class="row">
 						<div class="col-lg-12">
 							<div class="atf-salon-form">
-								<form action="#" class="atf-salon-form-box row">
+								<form action="#" class="atf-salon-form-box row" onsubmit="sendWhatsAppMessage(event)">
 									<div class="atf-salon-form-item col-lg-4 col-md-6">
-										<label> Nom et prenom</label>
+										<label>Nom et prénom</label>
 										<div class="form-group">
-											<input type="text" name="name" class="form-control" id="name1" placeholder="Nom et prenom"  required="required">
+											<input type="text" name="name" class="form-control" id="name1" placeholder="Nom et prénom" required="required">
 										</div>
 									</div> 
 									<div class="atf-salon-form-item col-lg-4 col-md-6">
-										<label> Email</label>
+										<label>Email</label>
 										<div class="form-group">
-											<input type="text" name="name" class="form-control" id="mail" placeholder="Email"  required="required">
+											<input type="email" name="email" class="form-control" id="mail" placeholder="Email" required="required">
 										</div>
 									</div> 
-									
 									<div class="atf-salon-form-item col-lg-4 col-md-6">
-										<label> Numero de telephone</label>
+										<label>Numéro de téléphone</label>
 										<div class="form-group">
-											<input type="text" name="name" class="form-control" id="phone" placeholder="Numero de telephone"  required="required">
+											<input type="text" name="phone" class="form-control" id="phone" placeholder="Numéro de téléphone" required="required">
 										</div>
 									</div> 
-									
-									<div class="atf-salon-form-item col-lg-4 col-md-6">		<label> Date</label>
+									<div class="atf-salon-form-item col-lg-4 col-md-6">
+										<label>Date</label>
 										<div class="atf-check-in">
-											<input class="form-control" type="text" id="exampleInputEmail" placeholder="Date" autocomplete="off">
+											<input class="form-control" type="text" id="date" placeholder="Date" autocomplete="off">
 											<div class="input-group-addon"><i class="far fa-calendar-alt"></i></div>
 										</div>
 									</div> 
-									
-									<div class="atf-salon-form-item col-lg-4 col-md-6">	
-										<label>Choisir une categorie</label>
-										<select class="nice-select">
+									<div class="atf-salon-form-item col-lg-4 col-md-6">
+										<label>Choisir une catégorie</label>
+										<select class="nice-select" id="category">
 											<option>maquillage</option>
 											<option>cheveux</option>
-											<option>ongelerie</option>
+											<option>onglerie</option>
 											<option>esthetique</option>
 										</select>
 									</div> 
-									
 									<div class="atf-salon-form-item col-lg-4 col-md-6 mx-auto my-auto">
 										<div class="atf-btn-wrapper text-center">
-											<!-- <button type="submit" class="btn theme-btn-1 btn-effect-1 text-uppercase">Search Inventory</button> -->
-											<a href="#" class="btn atf-themes-btn text-uppercase">reservez maintenant</a>
+											<button type="submit" class="btn atf-themes-btn text-uppercase">Réservez maintenant</button>
 										</div>
 									</div>
 								</form>
@@ -262,13 +258,13 @@
 			
 			
 			<!-- START PRACTISE SECTION  -->
-			<section id="service" class="atf-service-area bg-light atf-section-padding">
+			<section id="pricing" class="atf-service-area bg-light atf-section-padding">
 				<div class="container">
 					<div class="row justify-content-center">
 						<div class="col-lg-6">
 							<div class="atf-section-title text-center wow zoomIn" data-HOow-duration="1s" data-wow-delay="0.2s" data-wow-offset="0">
 								<h3>Nos Tarifs</h3>
-								<div class="title-divider mt-3"><img src="assets/img/favicon.png" class="img-fluid" alt="divider" /></div>
+								
 								<p class="f-15 mt-3">nous vous offrons une variété de Pack de beauté pour répondre à tous vos besoins.Chaque pack est conçu pour vous faire sentir belle et confiante.</p>
 							</div>
 						</div><!--- END COL -->
@@ -288,11 +284,11 @@
 									<h4 class="mb-3">Beauté et Coiffure</h4>
 									<p> Transformez votre look avec notre service exclusif, conçu pour révéler votre beauté naturelle avec un style impeccable et personnalisé</p>
 									<ul class="atf-service-inner-content mt-3">
-										<li>X</li>
-										<li>y</li>
-										<li>Z</li>
+										<li>Cil a Cil Normal</li>
+										<li>coiffure</li>
+										<li>makeup invite</li>
 									</ul>
-									<h5 class="mt-3 ms-1">Prix: <span>00 DH</span></h5>
+									<h5 class="mt-3 ms-1">Prix: <span>499 DH</span></h5>
 									<div class="atf-main-btn atf-about-btn mt-4"> 
 										<a href="#contact" class="atf-themes-btn">Reservez et profitez <i class="fa fa-angle-right"></i></a>
 									</div>
@@ -312,11 +308,11 @@
 									<h4 class="mb-3">Onglerie</h4>
 									<p> Sublimez vos mains avec nos services d'onglerie haut de gamme, alliant créativité et perfection pour des ongles impeccables et uniques.</p>
 									<ul class="atf-service-inner-content mt-3">
-										<li> C </li>
-										<li>H</li>
-										<li>L</li>
+										<li> Manucure</li>
+										<li>Pedicure</li>
+										<li>Pose vernis permanent</li>
 									</ul>
-									<h5 class="mt-3 ms-1">Prix: <span>0DH</span></h5>
+									<h5 class="mt-3 ms-1">Prix: <span>299 DH</span></h5>
 									<div class="atf-main-btn atf-about-btn mt-4"> 
 										<a href="#contact" class="atf-themes-btn">Reservez et profitez <i class="fa fa-angle-right"></i></a>
 									</div>
@@ -336,11 +332,11 @@
 									<h4 class="mb-3">Esthetique</h4>
 									<p>Découvrez l'art de la beauté avec nos soins esthétiques sur mesure, conçus pour revitaliser votre peau et vous offrir un moment de détente.</p>
 									<ul class="atf-service-inner-content mt-3">
-										<li> Salon</li>
-										<li> Style</li>
-										<li>Spa </li>
+										<li> Soin de visage </li>
+										<li> Epilation Complete</li>
+										<li> soin de cheveux </li>
 									</ul>
-									<h5 class="mt-3 ms-1">Prix: <span>0DH</span></h5>
+									<h5 class="mt-3 ms-1">Prix: <span>799 DH</span></h5>
 									<div class="atf-main-btn atf-about-btn mt-4"> 
 										<a href="#contact" class="atf-themes-btn">Reservez et profitez <i class="fa fa-angle-right"></i></a>
 									</div>
@@ -360,7 +356,7 @@
 						<div class="col-lg-6">
 							<div class="atf-section-title text-left pe-lg-5">
 								<h3>Nos horaires d'ouverture</h3>
-								<div class="title-divider"><img src="assets/img/favicon.png" class="img-fluid" alt="divider" /></div>
+								
 								<p class="f-15 mt-3">Prenez rendez-vous à l'heure qui vous convient le mieux et profitez de nos services dans un cadre relaxant.</p>
 								<div class="mt-4">	
 									<h5 class="atf-working-title"> Lundi - Vendredi :<span>9am-5pm</span> </h5>
@@ -384,13 +380,13 @@
 			
 			
 			<!-- FEATURE SECTION START-->
-			<section id="feature" class="atf-counter-area bg-light atf-section-padding">
+			<section id="service" class="atf-counter-area bg-light atf-section-padding">
 				<div class="container">
 					<div class="row justify-content-center">
 						<div class="col-lg-6">
 							<div class="atf-section-title text-center wow zoomIn" data-wow-duration="1s" data-wow-delay="0.2s" data-wow-offset="0">
-								<h3>Nos Atouts </h3>
-								<div class="title-divider mt-3"> <img src="assets/img/favicon.png" class="img-fluid" alt="divider" /></div>
+								<h3>Nos Service </h3>
+								
 								<p class="f-15 mt-3">Découvrez l'excellence à travers nos services personnalisés, alliant expertise, qualité, et un environnement propice à la détente absolue.</p>
 							</div>
 						</div><!--- END COL -->
@@ -448,7 +444,7 @@
 						<div class="col-lg-6">
 							<div class="atf-section-title text-center wow zoomIn" data-wow-duration="1s" data-wow-delay="0.2s" data-wow-offset="0">
 								<h3>Notre Portfolio</h3>
-								<div class="title-divider mt-3"> <img src="assets/img/favicon.png" class="img-fluid" alt="divider" /></div>
+								
 								<p class="f-15 mt-3">Explorez notre portfolio pour découvrir nos réalisations et laissez-vous inspirer par notre savoir-faire en matière de beauté et de bien-être.</p>
 							</div>
 						</div><!--- END COL -->
@@ -458,8 +454,8 @@
 					<div class="portfolio-filter text-center mt-5 pt-4">
 						<button class="active" data-filter="*">Tous</button>
 						<button data-filter=".filter1">Cheveux</button>
-						<button data-filter=".filter2">Maquillage</button>
-						<button data-filter=".filter3">Onglerie</button>
+						<button data-filter=".filter2">Onglerie</button>
+						<button data-filter=".filter3"> Maquillage</button>
 					</div>
 					
 
@@ -551,8 +547,8 @@
 						
 						
 					<div class="atf-main-btn mt-5 text-center">
-						<a class="atf-themes-btn" href="#">
-							View Photos <i class="fa fa-angle-right"></i>
+						<a class="atf-themes-btn" href="#contact">
+							Reservez maintenant <i class="fa fa-angle-right"></i>
 						</a>
 					</div>	
 				</div><!--- END CONTAINER -->
@@ -565,11 +561,11 @@
 					<div class="row justify-content-center">
 						<div class="col-lg-8 text-center">
 							<div class="atf-promo-content">
-								<h2 class="mb-4 text-white">Ready To Get Our Service</h2>
+								<h2 class="mb-4 text-white">prete a changer votre style</h2>
 								
 								<div class="atf-main-btn atf-home-btn">
-									<a class="atf-themes-btn" href="#">
-										Appointment Now <i class="fa fa-angle-right"></i>
+									<a class="atf-themes-btn" href="#contact">
+										Prenez votre rendez-vous <i class="fa fa-angle-right"></i>
 									</a>
 								</div>	
 							</div>
@@ -585,74 +581,31 @@
 					<div class="row justify-content-center">
 						<div class="col-lg-6">
 							<div class="atf-section-title text-center wow zoomIn" data-wow-duration="1s" data-wow-delay="0.2s" data-wow-offset="0">
-								<h3>Rencontrez notre Specialist</h3>
-								<div class="title-divider mt-3"> <img src="assets/img/favicon.png" class="img-fluid" alt="divider" /></div>
+								<h3>Rencontrez notre Specialiste</h3>
+								
 								<p class="f-15 mt-3">Rencontrez notre spécialiste Kawtar, une experte passionnée et qualifiée, prête à vous offrir des soins sur mesure pour répondre à tous vos besoins en beauté et bien-être.</p>
 							</div>
 						</div><!--- END COL -->
 					</div><!--- END ROW -->
 					
 						
-					<div class="row mt-5 pt-4">
+					<div class="row  pt-4 justify-content-center ">
 						<div class="col-lg-3">
 							<div class="atf-single-team  wow fadeIn" data-wow-duration="1s" data-wow-delay="0.2s" data-wow-offset="0">
 								<div class="atf-team-pic">
-									<img src="assets/img/team/1.jpg" alt="">
+									<img src="assets/img/team/1.jpg.png" alt="">
 								</div>
-								<h5 class="atf-team-title mt-4">Al-Malik</h5>
-								<span class="atf-team-post mt-2">Beauty & Spa</span>
+								<h5 class="atf-team-title mt-4">Kawtar</h5>
+								<span class="atf-team-post mt-2">Fondatrice d'<strong>Oglambeautycenter</strong></span>
 								<ul class="atf-team-social mt-3">
-									<li><a href="#" class="fab fa-facebook"></a></li>
-									<li><a href="#" class="fab fa-twitter"></a></li>
-									<li><a href="#" class="fab fa-google-plus"></a></li>
+									<li><a href="https://www.instagram.com/oglambeautycenter/" class="social-icon instagram" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a></li>
+									<li><a href="https://wa.me/212666754078" class="whatsapp-icon" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a></li>
+									<li><a href="https://www.facebook.com/Oglambeautycenter/"class="social-icon facebook" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a></li>
 								</ul>
 							</div>
 						</div><!--- END COL -->
 						
-						<div class="col-lg-3">
-							<div class="atf-single-team  wow fadeIn" data-wow-duration="1s" data-wow-delay="0.3s" data-wow-offset="0">
-								<div class="atf-team-pic">
-									<img src="assets/img/team/2.jpg" alt="">
-								</div>
-								<h5 class="atf-team-title mt-4">Al-Ghafur</h5>
-								<span class="atf-team-post mt-2">Hair Stylist</span>
-								<ul class="atf-team-social mt-3">
-									<li><a href="#" class="fab fa-facebook"></a></li>
-									<li><a href="#" class="fab fa-twitter"></a></li>
-									<li><a href="#" class="fab fa-google-plus"></a></li>
-								</ul>
-							</div>
-						</div><!--- END COL -->
 						
-						<div class="col-lg-3">
-							<div class="atf-single-team  wow fadeIn" data-wow-duration="1s" data-wow-delay="0.4s" data-wow-offset="0">
-								<div class="atf-team-pic">
-									<img src="assets/img/team/3.jpg" alt="">
-								</div>
-								<h5 class="atf-team-title mt-4">Al-Azim</h5>
-								<span class="atf-team-post mt-2">Beauty & Spa</span>
-								<ul class="atf-team-social mt-3">
-									<li><a href="#" class="fab fa-facebook"></a></li>
-									<li><a href="#" class="fab fa-twitter"></a></li>
-									<li><a href="#" class="fab fa-google-plus"></a></li>
-								</ul>
-							</div>
-						</div><!--- END COL -->
-						
-						<div class="col-lg-3">
-							<div class="atf-single-team  wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s" data-wow-offset="0">
-								<div class="atf-team-pic">
-									<img src="assets/img/team/4.jpg" alt="">
-								</div>
-								<h5 class="atf-team-title mt-4">Al-Wakil</h5>
-								<span class="atf-team-post mt-2">Hair Washing</span>
-								<ul class="atf-team-social mt-3">
-									<li><a href="#" class="fab fa-facebook"></a></li>
-									<li><a href="#" class="fab fa-twitter"></a></li>
-									<li><a href="#" class="fab fa-google-plus"></a></li>
-								</ul>
-							</div>
-						</div><!--- END COL -->
 					</div><!--- END ROW -->		
 				</div><!--- END CONTAINER -->
 			</section>
@@ -666,7 +619,7 @@
 						<div class="col-lg-6">
 							<div class="atf-section-title text-center wow zoomIn" data-wow-duration="1s" data-wow-delay="0.2s" data-wow-offset="0">
 								<h3>Client Review</h3>
-								<div class="title-divider mt-3"> <img src="assets/img/favicon.png" class="img-fluid" alt="divider" /></div>
+								
 								<p class="f-15 mt-3 ">Découvrez ce que nos clients disent de leur expérience avec nos services de beauté et bien-être. Votre satisfaction est notre priorité.</p>
 							</div>
 						</div><!--- END COL -->
@@ -742,8 +695,8 @@
 						<div class="col-lg-6">
 							<div class="atf-section-title text-center wow zoomIn" data-wow-duration="1s" data-wow-delay="0.2s" data-wow-offset="0">
 								<h3>Nos Pack</h3>
-								<div class="title-divider mt-3"> <img src="assets/img/favicon.png" class="img-fluid" alt="divider" /></div>
-								<p class="f-15 mt-3 ">Choisissez le forfait qui vous convient parmi nos plans de tarification flexibles, conçus pour offrir des services de qualité à des prix compétitifs.</p>
+								
+								<p class="f-15 mt-3 ">Choisissez le service qui vous convient parmi nos plans de tarification flexibles, conçus pour offrir des services de qualité à des prix compétitifs.</p>
 							</div>
 						</div><!--- END COL -->
 					</div><!--- END ROW -->
@@ -755,21 +708,21 @@
 								<div class="atf-pricing-heading text-center">
 									<div class="atf-pricing-name">
 										<div class="atf-pricing-icon"><img src="assets/img/feature/1.png" alt="Feature" /></div>
-										<h3 class="mt-4">Basic Plan</h3>
+										<h3 class="mt-4">beauté et cheveux</h3>
 									</div>
 								</div>
 								<div class="atf-pricing-body mt-4 ">
 									<ul>
-										<li><strong>Hair Cutting</strong><span class="doller">$30</span> <small>clean 20-30 Minutes</small>  </li>
-										<li><strong>Beauty Spa</strong><span class="doller">$80</span> <small>clean 40-50 Minutes</small>  </li>
-										<li><strong>Body Massage</strong><span class="doller">$70</span> <small>clean 25-35 Minutes</small></li>
+										<li><strong>Brushing</strong><span class="doller">50DH</span> <small> 20-30 Minutes</small>  </li>
+										<li><strong>Makeup invite</strong><span class="doller">200DH</span> <small> 40-50 Minutes</small>  </li>
+										<li><strong>Cil a Cil Normal</strong><span class="doller">70DH</span> <small> 25-35 Minutes</small></li>
+										<li><strong>Coupe de cheuveux</strong><span class="doller">100DH</span> <small> 20-35 Minutes</small></li>
 										
-										<li class="offer-list-none"><del>24/7 Open Shop</del></li>
 							
 									</ul>
 								</div>
 								<div class="atf-main-btn mt-4">
-									<a href="#" class="atf-themes-btn">Booking Now <i class="fa fa-angle-right"></i></a>
+									<a href="#Contact" class="atf-themes-btn">Reservez maintenant <i class="fa fa-angle-right"></i></a>
 								</div>
 							</div>
 						</div><!--- END COL -->
@@ -779,19 +732,19 @@
 								<div class="atf-pricing-heading text-center">
 									<div class="atf-pricing-name">
 										<div class="atf-pricing-icon"><img src="assets/img/feature/2.png" alt="Feature" /></div>
-										<h3 class="mt-4">Standard Plan</h3>
+										<h3 class="mt-4">Onglerie</h3>
 									</div>
 								</div>
 								<div class="atf-pricing-body mt-4 ">
 									<ul>
-										<li><strong>Hair Cutting</strong><span class="doller">$30</span> <small>clean 20-30 Minutes</small>  </li>
-										<li><strong>Beauty Spa</strong><span class="doller">$80</span> <small>clean 40-50 Minutes</small>  </li>
-										<li><strong>Body Massage</strong><span class="doller">$70</span> <small>clean 25-35 Minutes</small></li>
-										<li><strong>Fcial Massage</strong><span class="doller">$90</span> <small>clean 25-35 Minutes</small></li>
+										<li><strong>Gel</strong><span class="doller">200DH</span> <small> 70-90 Minutes</small>  </li>
+										<li><strong>Pose vernis permanent</strong><span class="doller">50DH</span> <small> 40-50 Minutes</small>  </li>
+										<li><strong>Faux ongles permanent</strong><span class="doller">100DH</span> <small> 50-60 Minutes</small></li>
+										<li><strong>Manucure et Pedicure</strong><span class="doller">150DH</span> <small> 70-90 Minutes</small></li>
 									</ul>
 								</div>
 								<div class="atf-main-btn mt-4">
-									<a href="#" class="atf-themes-btn">Booking Now <i class="fa fa-angle-right"></i></a>
+									<a href="#contact" class="atf-themes-btn"> Reservez maintenant <i class="fa fa-angle-right"></i></a>
 								</div>
 							</div>
 						</div><!--- END COL -->
@@ -801,19 +754,19 @@
 								<div class="atf-pricing-heading text-center">
 									<div class="atf-pricing-name">
 										<div class="atf-pricing-icon"><img src="assets/img/feature/3.png" alt="Feature" /></div>
-										<h3 class="mt-4">Premium Plan</h3>
+										<h3 class="mt-4">Esthetique</h3>
 									</div>
 								</div>
 								<div class="atf-pricing-body mt-4 ">
 									<ul>
-										<li><strong>Hair Cutting</strong><span class="doller">$30</span> <small>clean 20-30 Minutes</small>  </li>
-										<li><strong>Beauty Spa</strong><span class="doller">$80</span> <small>clean 40-50 Minutes</small>  </li>
-										<li><strong>Body Massage</strong><span class="doller">$70</span> <small>clean 25-35 Minutes</small></li>
-										<li><strong>Fcial Massage</strong><span class="doller">$90</span> <small>clean 25-35 Minutes</small></li>
+										<li><strong>Epilation complete</strong><span class="doller">150DH</span> <small> 30-45 Minutes</small>  </li>
+										<li><strong>Soin de visage</strong><span class="doller">200DH</span> <small> 40-50 Minutes</small>  </li>
+										<li><strong>Soin de cheveux</strong><span class="doller">=>500DH</span> <small> 60-80 Minutes</small></li>
+										<li><strong>MicroShading</strong><span class="doller">200DH</span> <small>clean 35-45 Minutes</small></li>
 									</ul>
 								</div>
 								<div class="atf-main-btn mt-4">
-									<a href="#" class="atf-themes-btn">Booking Now <i class="fa fa-angle-right"></i></a>
+									<a href="#contact" class="atf-themes-btn">Reservez maintenant <i class="fa fa-angle-right"></i></a>
 								</div>
 							</div>
 						</div><!--- END COL -->
@@ -856,7 +809,7 @@
 							<div class="atf-section-title text-center wow zoomIn" data-wow-duration="1s" data-wow-delay="0.2s" data-wow-offset="0">
 								<h3>Nos nouveautés
 								</h3>
-								<div class="title-divider mt-3"> <img src="assets/img/favicon.png" class="img-fluid" alt="divider" /></div>
+								
 								<p class="f-15 mt-3 ">Découvrez les dernières tendances chez <strong>OglamBeautyMarrakech</strong> Nouveaux soins visage, techniques de coiffure à la pointe et manucures aux couleurs de saison, tout est pensé pour sublimer votre beauté. Restez à jour avec nos nouveautés et profitez d'une expérience beauté unique et innovante.</p>
 							</div>
 						</div><!--- END COL -->
@@ -935,16 +888,16 @@
 									<form id="contact-form" class="atf-contact-form form" method="POST" action="assets/php/mail.php">
 										<div class="row">
 											<div class="form-group col-lg-6">
-												<input type="text" name="name" class="form-control" id="name" placeholder="Votre nom"  required="required">
+												<input type="text" name="Nom" class="form-control" id="Nom" placeholder="Votre nom"  required="required">
 											</div>
 											<div class="form-group col-lg-6">
-												<input type="email" name="email" class="form-control" id="form_email" placeholder="Votre prenom" required="required">
+												<input type="text" name="prenom" class="form-control" id="Prenom" placeholder="Votre prenom" required="required">
 											</div>
 											<div class="form-group col-lg-12">
-												<input type="text" name="subject" class="form-control" id="subject" placeholder="Votre email" required="required">
+												<input type="date" name="Date" class="form-control" id="Date" placeholder="Choisissez votre date" required="required">
 											</div>
 											<div class="form-group col-lg-12">
-												<textarea rows="6" name="message" class="form-control" id="message" placeholder="Votre Message" required="required"></textarea>
+												<textarea rows="6" name="message" class="form-control" id="Message" placeholder="Votre Message" required="required"></textarea>
 											</div>
 											<div class="col-lg-12">
 												<div class="atf-contact-btn text-left">
@@ -1160,6 +1113,7 @@
 		<script src="assets/js/ajaxchimp.min.js"></script>
 		<!-- form-contact js -->
 		<script src="assets/js/form-contact.js"></script>
+		<script src="assets/js/whatsapp.js"></script>
 		<!-- main js -->
 		<script src="assets/js/main.js"></script>	
 		
