@@ -159,21 +159,21 @@
 										<label>Nom</label>
 										<div class="form-group">
 											<input type="text" name="name" class="form-control" id="nom" placeholder="Nom" required="required">
-											<span class="error-message" id="nameError" style="color: rgb(255, 251, 251);"></span>
+											<span class="error-message" id="nameError" style="color: rgb(255, 252, 251);"></span>
 										</div>
 									</div>
 									<div class="atf-salon-form-item col-lg-4 col-md-6">
 										<label>Prénom</label>
 										<div class="form-group">
 											<input type="text" name="prenom" class="form-control" id="prenom" placeholder="Prénom" required="required">
-											<span class="error-message" id="prenomError" style="color:rgb(255, 251, 251);"></span>
+											<span class="error-message" id="prenomError" style="color:  rgb(255, 252, 251);;"></span>
 										</div>
 									</div>
 									<div class="atf-salon-form-item col-lg-4 col-md-6">
 										<label>Date</label>
 										<div class="atf-check-in">
 											<input class="form-control" type="text" id="date" placeholder="DD-MM-YY" autocomplete="off">
-											<span class="error-message" id="dateError" style="color: rgb(255, 251, 251);"></span>
+											<span class="error-message" id="dateError" style="color:  rgb(255, 252, 251);;"></span>
 											<div class="input-group-addon"><i class="far fa-calendar-alt"></i></div>
 										</div>
 									</div>
@@ -181,7 +181,7 @@
 										<label>Message</label>
 										<div class="form-group">
 											<input type="text" name="message" class="form-control" id="message" placeholder="Message" required="required">
-											<span class="error-message" id="messageError" style="color: rgb(255, 251, 251);"></span>
+											<span class="error-message" id="messageError" style="color:  rgb(255, 252, 251);;"></span>
 										</div>
 									</div>
 									<div class="atf-salon-form-item col-lg-4 col-md-6">
@@ -893,24 +893,29 @@
 									<form id="contact-form" class="atf-contact-form form" method="POST" action="assets/php/mail.php">
 										<div class="row">
 											<div class="form-group col-lg-6">
-												<input type="text" name="Nom" class="form-control" id="Nom" placeholder="Votre nom"  required="required">
+												<input type="text" name="Nom" class="form-control" id="Nom" placeholder="Votre nom" required="required">
+												<span class="error-message" id="error-nom" style="color: red; font-size: 0.9em; margin-top: 5px;"></span>
 											</div>
 											<div class="form-group col-lg-6">
-												<input type="text" name="prenom" class="form-control" id="Prenom" placeholder="Votre prenom" required="required">
+												<input type="text" name="prenom" class="form-control" id="Prenom" placeholder="Votre prénom" required="required">
+												<span class="error-message" id="error-prenom" style="color: red; font-size: 0.9em; margin-top: 5px;"></span>
 											</div>
 											<div class="form-group col-lg-12">
-												<input type="date" name="Date" class="form-control" id="Date" placeholder="Choisissez votre date" required="required">
+												<input name="Date" class="form-control" id="Date" type="text" placeholder="DD-MM-YYYY" autocomplete="off">
+												<span class="error-message" id="error-date" style="color: red; font-size: 0.9em; margin-top: 5px;"></span>
 											</div>
 											<div class="form-group col-lg-12">
-												<textarea rows="6" name="message" class="form-control" id="Message" placeholder="Votre Message" required="required"></textarea>
+												<textarea rows="6" name="message" class="form-control" id="Message" placeholder="Votre message" required="required"></textarea>
+												<span class="error-message" id="error-message" style="color: red; font-size: 0.9em; margin-top: 5px;"></span>
 											</div>
 											<div class="col-lg-12">
 												<div class="atf-contact-btn text-left">
-													<button type="submit" value="Submit Now" name="submit" id="submitButton" class="atf-themes-btn" title="Submit Your Message!">envoyer votre message</button>
+													<button type="submit" value="Submit Now" name="submit" id="submitButton" class="atf-themes-btn" title="Submit Your Message!">Envoyer votre message</button>
 												</div>
 											</div>
 										</div>
 									</form>
+									
 									<p class="form-message"></p>
 									
 								</div>
